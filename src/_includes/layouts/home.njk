@@ -55,16 +55,7 @@ templateEngineOverride: md, njk
 </header>
 <main class="tdbc-container">
   <div class="tdbc-section">
-    <ul class="tdbc-column-container">
-      {%- for page in collections.pages -%}
-      <li class="tdbc-card">
-        <div class="tdbc-card__content">
-          <a href="{{ page.url }}" class="tdbc-card__title">{{ page.data.title }}</a>
-          <p>{{ page.data.description }}</p>
-        </div>
-      </li>
-      {%- endfor -%}
-    </ul>
+    {% include "components/game-list.njk"%}
   </div>
   <style>
     #quickstart + ol li:first-child,
@@ -72,9 +63,4 @@ templateEngineOverride: md, njk
       font-size: 1.5rem;
     }
   </style>
-
-<h2>Games</h2>
-{% set postslist = collections.games %}
-{% include "../components/game-list.njk" %}
-
 </main>
