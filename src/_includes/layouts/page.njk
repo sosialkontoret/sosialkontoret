@@ -1,7 +1,7 @@
 ---
-layout: base.njk
+layout: layouts/base.njk
 ---
-{% include 'sitenav.njk' %}
+{% include '../components/sitenav.njk' %}
 
 <header class="tdbc-hero">
   <div class="tdbc-container">
@@ -16,3 +16,5 @@ layout: base.njk
     {{ content | safe }}
   </article>
 </main>
+
+{% include '../components/footer.njk' %}

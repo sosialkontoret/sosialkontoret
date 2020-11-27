@@ -1,10 +1,10 @@
-<ol reversed class="game-list" style="counter-reset: start-from {{ postslist.length + 1 }}">
+<ol class="game-list" style="counter-reset: start-from {{ postslist.length + 1 }}">
 {% for post in postslist | reverse %}
   <li class="game-list-item{% if post.url == url %} game-list-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="game-list-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="game-list-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    {# <time class="game-list-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> #}
     {% for tag in post.data.tags %}
-      {%- if tag != "posts" -%}
+      {%- if tag != "games" -%}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
       {%- endif -%}
