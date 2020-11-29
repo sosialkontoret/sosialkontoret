@@ -4,10 +4,10 @@
 
 .tdbc-anchor {
   display: inline-block;
-  margin-left: 0.25em;
-  transition: 180ms opacity ease-in-out;
-  opacity: 0.6;
   font-size: 0.65em;
+  margin-left: 0.25em;
+  opacity: 0.6;
+  transition: 180ms opacity ease-in-out;
   vertical-align: top;
 
   &:hover {
@@ -47,14 +47,14 @@ $tdbc-alignments: left, center, right !default;
 }
 
 .tdbc-mx-auto {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 @each $key, $unit in $tdbc-spacing {
   .tdbc-my-#{$key} {
-    margin-top: $unit;
     margin-bottom: $unit;
+    margin-top: $unit;
   }
 
   .tdbc-mt-#{$key} {

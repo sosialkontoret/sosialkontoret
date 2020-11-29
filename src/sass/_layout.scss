@@ -1,18 +1,18 @@
 // stylelint-disable-next-line selector-max-type
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   background-color: tdbc-color("background");
   color: $tdbc-color-body;
+  display: flex;
+  flex-direction: column;
   font-family: $tdbc-font-family;
+  min-height: 100vh;
 }
 
 // stylelint-disable selector-max-type, selector-no-qualifying-type
 main,
 main.tdbc-container {
-  padding-top: 5vh;
   padding-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 footer {
@@ -23,8 +23,8 @@ article {
   max-width: 80ch;
 
   > img {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 // stylelint-enable
@@ -32,11 +32,11 @@ article {
 .tdbc-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 120ch;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  max-width: 120ch;
   padding: 1rem;
+  width: 100%;
 }
 
 .tdbc-column-container {
@@ -54,8 +54,8 @@ ul.tdbc-column-container {
   width: 100%;
 
   &--padded {
-    padding-top: 10vh;
     padding-bottom: 10vh;
+    padding-top: 10vh;
   }
 
   // stylelint-disable-next-line selector-max-universal
@@ -67,9 +67,9 @@ ul.tdbc-column-container {
 .tdbc-hero {
   display: grid;
   min-height: 40vh;
-  place-content: center;
-  padding-top: 10vh;
   padding-bottom: 10vh;
+  padding-top: 10vh;
+  place-content: center;
   text-align: center;
 }
 
@@ -78,8 +78,8 @@ ul.tdbc-column-container {
   grid-gap: 1rem;
 
   @media (min-width: 80ch) {
-    grid-auto-flow: column;
     grid-auto-columns: max-content;
+    grid-auto-flow: column;
   }
 
   &--center-content {
@@ -93,7 +93,7 @@ ul.tdbc-column-container {
 
 // stylelint-disable-next-line selector-max-type
 hr {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   border: 1px solid tdbc-color("secondary");
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
