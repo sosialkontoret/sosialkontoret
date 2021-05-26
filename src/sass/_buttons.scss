@@ -1,64 +1,64 @@
 .tdbc-button {
-  display: inline-flex;
   align-items: center;
   align-self: start;
-  justify-content: center;
-  min-width: 10ch;
-  min-height: 44px;
-  padding: 0.25em 1em;
-  transition: 180ms ease-in-out;
-  transition-property: background, border;
-  border-radius: $tdbc-border-radius/2;
   background-color: tdbc-color("primary");
+  border-radius: $tdbc-border-radius/2;
   color: #fff;
+  cursor: pointer;
+  display: inline-flex;
   font-size: 1.125rem;
+  justify-content: center;
   line-height: 1.1;
+  min-height: 44px;
+  min-width: 10ch;
+  padding: 0.25em 1em;
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
+  transition: 180ms ease-in-out;
+  transition-property: background, border;
 
   @media screen and (-ms-high-contrast: active) {
     border: 2px solid currentColor;
   }
 
   &:focus {
+    box-shadow: 0 0 0 3px scale-color(tdbc-color("primary"), $lightness: -30%);
     outline-color: transparent;
     outline-style: solid;
-    box-shadow: 0 0 0 3px scale-color(tdbc-color("primary"), $lightness: -30%);
   }
 
   &--small {
-    min-height: 34px;
     font-size: 1rem;
+    min-height: 34px;
   }
 
   &--center {
     align-self: center;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 
   &__icon {
-    width: 1.5em;
     height: 1.5em;
     margin-right: 0.25em;
+    width: 1.5em;
 
     &--end {
-      margin-right: 0;
       margin-left: 0.25em;
+      margin-right: 0;
     }
 
     // stylelint-disable-next-line  selector-max-type
     svg {
-      width: 100%;
-      height: 100%;
       fill: currentColor;
+      height: 100%;
+      width: 100%;
     }
   }
 
   &-outlined {
-    border: 2px solid tdbc-color("primary");
     background-color: transparent;
+    border: 2px solid tdbc-color("primary");
     color: tdbc-color("primary");
 
     &:hover,
@@ -111,21 +111,21 @@
 
 .tdbc-button__icon,
 .tdbc-icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
   display: inline-flex;
-  position: relative;
-  width: 1em;
+  font-size: 1.5rem;
   height: 1em;
   padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
+  position: relative;
+  width: 1em;
 
   // stylelint-disable-next-line selector-max-type
   svg {
     flex-shrink: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -148,14 +148,14 @@
 
   &:focus {
     &::after {
-      position: absolute;
-      top: -0.3em;
-      right: -0.3em;
-      bottom: -0.3em;
-      left: -0.3em;
       border: 1px solid currentColor;
       border-radius: 50%;
+      bottom: -0.3em;
       content: "";
+      left: -0.3em;
+      position: absolute;
+      right: -0.3em;
+      top: -0.3em;
     }
   }
 }
